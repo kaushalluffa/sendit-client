@@ -1,0 +1,84 @@
+.connect {
+  height: 90vh;
+  background-color: #262322;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/brands.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    z-index: 2;
+
+    &--spotify {
+      border: 1px solid #000;
+      background-color: #1db954;
+      padding: 1rem 1.5rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.5rem;
+      width: 15rem;
+      cursor: pointer;
+      transform: translateY(0);
+      box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -webkit-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -moz-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+    }
+    &--youtube {
+      cursor: pointer;
+      justify-content: center;
+      border: 1px solid #000;
+      background-color: #ff0000;
+      padding: 1rem 1.5rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+      width: 15rem;
+      transform: translateY(0);
+      box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -webkit-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -moz-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+    }
+    &--apple {
+      cursor: pointer;
+      border: 1px solid #000000;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      width: 15rem;
+      padding: 1rem 1.5rem;
+      gap: 0.5rem;
+      transform: translateY(0);
+      box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -webkit-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+      -moz-box-shadow: 1px 9px 5px -3px rgba(0, 0, 0, 0.37);
+    }
+    &--spotify:active,
+    &--apple:active,
+    &--youtube:active {
+      transform: translateY(0.1rem);
+    }
+  }
+}
