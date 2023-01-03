@@ -7,6 +7,9 @@ const Main = () => {
     <div className="main">
       <div className="main__wrapper">
         <div className="main__wrapper--content">
+          <h1 className="heading">Need the playlists transfer ?</h1>
+          <h2 className="heading">Let's do it!</h2>
+
           <p className="text">
             We help you to transfer your playlist from your one online music
             service to another in an easy manner. You don't need to worry about
