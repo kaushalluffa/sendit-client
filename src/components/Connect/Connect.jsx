@@ -4,7 +4,7 @@ import { FaSpotify, FaApple, FaYoutube } from "react-icons/fa";
 import "./Connect.scss";
 
 const Connect = ({closed,setClosed}) => {
-  const [spotifyConnected, setSpotifyConnected] = useState(false);
+  const [spotifyConnected, setSpotifyConnected] = useState( JSON.parse(localStorage.getItem('user')).userId ? true : false);
   const [youtubeConnected, setYoutubeConnected] = useState(false);
   const [appleConnected, setAppleConnected] = useState(false);
   const [user, setUser] = useState(
@@ -12,12 +12,21 @@ const Connect = ({closed,setClosed}) => {
   );
   let windowOpen;
   function onClickSpotify() {
-    // setClosed(false)
+    let timer = null;
     windowOpen = window.open(
       "http://localhost:8000/auth/spotify",
       "_blank",
       "widht=500, height=500"
     );
+    if (windowOpen) {
+      timer = setInterval(() => {
+        if(windowOpen.closed){
+          fetchUser()
+          if(timer) clearInterval(timer)
+        }
+       }, 500);
+    }
+
      
   }
 
@@ -34,22 +43,12 @@ const Connect = ({closed,setClosed}) => {
       .then((res) => {
         if (res.data.userId) {
           setSpotifyConnected(true);
+          setUser(res.data)
           localStorage.setItem("user", JSON.stringify(res.data));
         }
       });
   }
-  useEffect(() => {
-    // const int = setInterval(() => {
-    //   console.log("hi");
-    //   if (!user.userId) {
-    //     fetchUser();
-    //   }
-    // }, 500);
-    // if (user.userId) {
-    //   return clearInterval(int);
-    // }
-  }, [closed]);
-  console.log(closed)
+ 
 
   return (
     <div className="connect">
