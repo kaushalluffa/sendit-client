@@ -7,6 +7,8 @@ const Sucess = ({setClosed}) => {
       window.close()
     },2000)
   },[])
+  
+  
   return (
     <div>Sucess</div>
   )
