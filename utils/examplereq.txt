@@ -1,4 +1,0 @@
-url= https://youtube.googleapis.com/youtube/v3/playlists
-headers = {
-    Authorization: 'Bearer access_token'
-}

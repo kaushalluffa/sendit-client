@@ -6,6 +6,7 @@ import Main from "./components/Main/Main";
 import Connect from "./components/Connect/Connect";
 import Success from "./components/Success/Success";
 import { useState } from "react";
+import Merge from "./components/Merge/Merge";
 
 function App() {
   const [closed, setClosed] = useState(false);
@@ -19,6 +20,7 @@ function App() {
           element={<Connect closed={closed} setClosed={setClosed} />}
         />
         <Route path="/success" element={<Success setClosed={setClosed} />} />
+        <Route path="/merge" element={<Merge/>} />
       </Routes>
       <Footer />
     </div>

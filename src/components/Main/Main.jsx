@@ -15,7 +15,7 @@ const Main = () => {
             service to another in an easy manner. You don't need to worry about
             doing it manually we will do it for you automatically and faster.
           </p>
-          <button className='btn'><Link to="/connect">Get Started</Link></button>
+          <Link className='btn'to="/connect">Get Started</Link>
         </div>
       </div>
     </div>

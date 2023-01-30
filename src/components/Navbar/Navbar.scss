@@ -1,19 +1,16 @@
-.navbar{
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    &__logo{
-        font-size: 1.5rem;
+.navbar {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  &__logo {
+    font-size: 1.5rem;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
-    &__bars{
-        display: none;
-    }
-    &__menu{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-width: 40%;
-    }
+  }
 }
